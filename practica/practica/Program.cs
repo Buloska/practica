@@ -1,4 +1,4 @@
-using System;
+п»їusing System;
 using System.Collections.Generic;
 
 namespace TestingMethodsDemo
@@ -9,33 +9,33 @@ namespace TestingMethodsDemo
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("====================================");
-            Console.WriteLine("=== ТЕСТИРОВАНИЕ РАЗНЫМИ МЕТОДАМИ ===");
+            Console.WriteLine("=== РўР•РЎРўРР РћР’РђРќРР• Р РђР—РќР«РњР РњР•РўРћР”РђРњР ===");
             Console.WriteLine("====================================\n");
             Console.ResetColor();
 
             while (true)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("Выберите тип тестирования:");
+                Console.WriteLine("Р’С‹Р±РµСЂРёС‚Рµ С‚РёРї С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ:");
                 Console.ResetColor();
 
-                Console.WriteLine("1. Тестирование белого ящика (площадь треугольника)");
-                Console.WriteLine("2. Тестирование черного ящика (площадь цилиндра)");
-                Console.WriteLine("3. Модульное тестирование (калькулятор)");
-                Console.WriteLine("4. Интеграционное тестирование (сервис заказов)");
+                Console.WriteLine("1. РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ Р±РµР»РѕРіРѕ СЏС‰РёРєР° (РїР»РѕС‰Р°РґСЊ С‚СЂРµСѓРіРѕР»СЊРЅРёРєР°)");
+                Console.WriteLine("2. РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ С‡РµСЂРЅРѕРіРѕ СЏС‰РёРєР° (РїР»РѕС‰Р°РґСЊ С†РёР»РёРЅРґСЂР°)");
+                Console.WriteLine("3. РњРѕРґСѓР»СЊРЅРѕРµ С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ (РєР°Р»СЊРєСѓР»СЏС‚РѕСЂ)");
+                Console.WriteLine("4. РРЅС‚РµРіСЂР°С†РёРѕРЅРЅРѕРµ С‚РµСЃС‚РёСЂРѕРІР°РЅРёРµ (СЃРµСЂРІРёСЃ Р·Р°РєР°Р·РѕРІ)");
 
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("0. Выход");
+                Console.WriteLine("0. Р’С‹С…РѕРґ");
                 Console.ResetColor();
 
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write("Ваш выбор: ");
+                Console.Write("Р’Р°С€ РІС‹Р±РѕСЂ: ");
                 Console.ResetColor();
 
                 if (!int.TryParse(Console.ReadLine(), out var choice))
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("Некорректный ввод. Попробуйте еще раз.\n");
+                    Console.WriteLine("РќРµРєРѕСЂСЂРµРєС‚РЅС‹Р№ РІРІРѕРґ. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.\n");
                     Console.ResetColor();
                     continue;
                 }
@@ -53,16 +53,16 @@ namespace TestingMethodsDemo
                         BlackBoxTesting();
                         break;
                     case 3:
-                        UnitTestingDemo();
+                        UnitTesting();
                         break;
                     case 4:
-                        IntegrationTestingDemo();
+                        IntegrationTesting();
                         break;
                     case 0:
                         return;
                     default:
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.WriteLine("Неизвестный выбор. Попробуйте еще раз.");
+                        Console.WriteLine("РќРµРёР·РІРµСЃС‚РЅС‹Р№ РІС‹Р±РѕСЂ. РџРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р·.");
                         Console.ResetColor();
                         break;
                 }
@@ -76,45 +76,48 @@ namespace TestingMethodsDemo
         static void WhiteBoxTesting()
         {
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("=== ТЕСТИРОВАНИЕ БЕЛОГО ЯЩИКА ===");
-            Console.WriteLine("Метод вычисления площади треугольника по формуле Герона\n");
+            Console.WriteLine("=== РўР•РЎРўРР РћР’РђРќРР• Р‘Р•Р›РћР“Рћ РЇР©РРљРђ ===");
+            Console.WriteLine("РўРµСЃС‚РёСЂСѓРµРј РјРµС‚РѕРґ СЂР°СЃС‡РµС‚Р° РїР»РѕС‰Р°РґРё С‚СЂРµСѓРіРѕР»СЊРЅРёРєР° СЃ РїРѕР»РЅС‹Рј Р·РЅР°РЅРёРµРј РµРіРѕ СЂРµР°Р»РёР·Р°С†РёРё");
             Console.ResetColor();
 
-            TestTriangle(3, 4, 5, 6, "Тест 1 (3,4,5)");
+            Console.WriteLine("\nР—Р°РїСѓСЃРє С‚РµСЃС‚РѕРІ...");
+            TestTriangle(3, 4, 5, 6, "РћР±С‹С‡РЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє (3,4,5)");
+            TestTriangle(1, 2, 3, 0, "Р’С‹СЂРѕР¶РґРµРЅРЅС‹Р№ С‚СЂРµСѓРіРѕР»СЊРЅРёРє (1,2,3)");
+            TestTriangle(-1, 2, 3, 0, "РћС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рµ СЃС‚РѕСЂРѕРЅС‹ (-1,2,3)", true);
 
-            TestTriangle(2, 2, 2, Math.Sqrt(3), "Тест 2 (2,2,2)");
-
-            TestTriangle(1, 2, 3, 0, "Тест 3 (1,2,3)");
-
-            try
-            {
-                double actual = TriangleArea(-1, 2, 3);
-                PrintTestResult("Тест 4 (-1,2,3)", "Ожидается исключение", actual.ToString(), false);
-            }
-            catch (ArgumentException)
-            {
-                PrintTestResult("Тест 4 (-1,2,3)", "исключение", "исключение", true);
-            }
+            Console.WriteLine("\nРС‚РѕРіРё С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ Р±РµР»РѕРіРѕ СЏС‰РёРєР°:");
+            Console.WriteLine("- РџСЂРѕРІРµСЂРµРЅС‹ РІСЃРµ РІРѕР·РјРѕР¶РЅС‹Рµ РїСѓС‚Рё РІС‹РїРѕР»РЅРµРЅРёСЏ РєРѕРґР°");
+            Console.WriteLine("- РџСЂРѕС‚РµСЃС‚РёСЂРѕРІР°РЅС‹ РіСЂР°РЅРёС‡РЅС‹Рµ СЃР»СѓС‡Р°Рё");
+            Console.WriteLine("- РЈС‡С‚РµРЅС‹ РІСЃРµ РІРѕР·РјРѕР¶РЅС‹Рµ РёСЃРєР»СЋС‡РµРЅРёСЏ");
         }
 
-        static void TestTriangle(double a, double b, double c, double expected, string testName)
+        static void TestTriangle(double a, double b, double c, double expected, string description, bool expectException = false)
         {
+            Console.WriteLine($"\nРўРµСЃС‚: {description}");
             try
             {
                 double actual = TriangleArea(a, b, c);
+                if (expectException)
+                {
+                    PrintTestResult("Р РµР·СѓР»СЊС‚Р°С‚:", "РћР¶РёРґР°Р»РѕСЃСЊ РёСЃРєР»СЋС‡РµРЅРёРµ", "РСЃРєР»СЋС‡РµРЅРёРµ РЅРµ РІРѕР·РЅРёРєР»Рѕ", false);
+                    return;
+                }
+
                 bool success = Math.Abs(expected - actual) < 0.0001;
-                PrintTestResult(testName, expected.ToString(), actual.ToString(), success);
+                PrintTestResult("Р РµР·СѓР»СЊС‚Р°С‚:", expected.ToString(), actual.ToString(), success);
+                Console.WriteLine($"РџРѕРґСЂРѕР±РЅРѕСЃС‚Рё: a={a}, b={b}, c={c}, p={(a + b + c) / 2}, РїР»РѕС‰Р°РґСЊ={actual}");
             }
-            catch (Exception ex)
+            catch (ArgumentException)
             {
-                PrintTestResult(testName, "корректный результат", ex.Message, false);
+                PrintTestResult("Р РµР·СѓР»СЊС‚Р°С‚:", expectException ? "РћР¶РёРґР°Р»РѕСЃСЊ РёСЃРєР»СЋС‡РµРЅРёРµ" : expected.ToString(),
+                              "РџРѕР»СѓС‡РµРЅРѕ РёСЃРєР»СЋС‡РµРЅРёРµ", expectException);
             }
         }
 
         static double TriangleArea(double a, double b, double c)
         {
             if (a <= 0 || b <= 0 || c <= 0)
-                throw new ArgumentException("Стороны должны быть положительными");
+                throw new ArgumentException("РЎС‚РѕСЂРѕРЅС‹ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹РјРё");
 
             if (a + b <= c || a + c <= b || b + c <= a)
                 return 0;
@@ -126,209 +129,191 @@ namespace TestingMethodsDemo
         static void BlackBoxTesting()
         {
             Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("=== ТЕСТИРОВАНИЕ ЧЕРНОГО ЯЩИКА ===");
-            Console.WriteLine("Метод вычисления площади поверхности цилиндра\n");
+            Console.WriteLine("=== РўР•РЎРўРР РћР’РђРќРР• Р§Р•Р РќРћР“Рћ РЇР©РРљРђ ===");
+            Console.WriteLine("РўРµСЃС‚РёСЂСѓРµРј РјРµС‚РѕРґ СЂР°СЃС‡РµС‚Р° РїР»РѕС‰Р°РґРё С†РёР»РёРЅРґСЂР° Р±РµР· Р·РЅР°РЅРёСЏ РµРіРѕ СЂРµР°Р»РёР·Р°С†РёРё");
+            Console.WriteLine("Р’РІРµРґРёС‚Рµ РїР°СЂР°РјРµС‚СЂС‹ С†РёР»РёРЅРґСЂР° РґР»СЏ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ:");
             Console.ResetColor();
 
-            TestCylinder(2, 3, 2 * Math.PI * 2 * 3 + 2 * Math.PI * 2 * 2, "Тест 1 (r=2,h=3)");
+            Console.Write("Р’РІРµРґРёС‚Рµ СЂР°РґРёСѓСЃ С†РёР»РёРЅРґСЂР°: ");
+            double radius = double.Parse(Console.ReadLine());
 
+            Console.Write("Р’РІРµРґРёС‚Рµ РІС‹СЃРѕС‚Сѓ С†РёР»РёРЅРґСЂР°: ");
+            double height = double.Parse(Console.ReadLine());
+
+            Console.WriteLine("\nР—Р°РїСѓСЃРє С‚РµСЃС‚Р°...");
             try
             {
-                double area = CylinderArea(2, 0);
-                PrintTestResult("Тест 2 (r=2,h=0)", "исключение", area.ToString(), false);
+                double result = CylinderArea(radius, height);
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine($"РўРµСЃС‚ РїСЂРѕР№РґРµРЅ СѓСЃРїРµС€РЅРѕ!");
+                Console.ResetColor();
+                Console.WriteLine($"РџР»РѕС‰Р°РґСЊ РїРѕРІРµСЂС…РЅРѕСЃС‚Рё С†РёР»РёРЅРґСЂР°:");
+                Console.WriteLine($"- Р Р°РґРёСѓСЃ: {radius}");
+                Console.WriteLine($"- Р’С‹СЃРѕС‚Р°: {height}");
+                Console.WriteLine($"- Р РµР·СѓР»СЊС‚Р°С‚: {result:F4}");
+                Console.WriteLine($"- РџСЂРѕРІРµСЂРєР°: 2*ПЂ*r*h + 2*ПЂ*rВІ = {2 * Math.PI * radius * height:F4} + {2 * Math.PI * radius * radius:F4} = {result:F4}");
             }
-            catch (ArgumentException)
+            catch (ArgumentException ex)
             {
-                PrintTestResult("Тест 2 (r=2,h=0)", "исключение", "исключение", true);
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"РўРµСЃС‚ РЅРµ РїСЂРѕР№РґРµРЅ: {ex.Message}");
+                Console.ResetColor();
+                Console.WriteLine($"РћС€РёР±РєР° РїСЂРё РїР°СЂР°РјРµС‚СЂР°С…:");
+                Console.WriteLine($"- Р Р°РґРёСѓСЃ: {radius}");
+                Console.WriteLine($"- Р’С‹СЃРѕС‚Р°: {height}");
             }
 
-            try
-            {
-                double area = CylinderArea(-1, 5);
-                PrintTestResult("Тест 3 (r=-1,h=5)", "исключение", area.ToString(), false);
-            }
-            catch (ArgumentException)
-            {
-                PrintTestResult("Тест 3 (r=-1,h=5)", "исключение", "исключение", true);
-            }
-
-            TestCylinder(100, 200, 2 * Math.PI * 100 * 200 + 2 * Math.PI * 100 * 100, "Тест 4 (r=100,h=200)");
+            Console.WriteLine("\nРС‚РѕРіРё С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ С‡РµСЂРЅРѕРіРѕ СЏС‰РёРєР°:");
+            Console.WriteLine("- РџСЂРѕРІРµСЂРµРЅР° СЂРµР°РєС†РёСЏ РјРµС‚РѕРґР° РЅР° СЂР°Р·Р»РёС‡РЅС‹Рµ РІС…РѕРґРЅС‹Рµ РґР°РЅРЅС‹Рµ");
+            Console.WriteLine("- РЈС‡С‚РµРЅС‹ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ Р·РЅР°С‡РµРЅРёСЏ РїР°СЂР°РјРµС‚СЂРѕРІ");
+            Console.WriteLine("- Р РµР·СѓР»СЊС‚Р°С‚С‹ РІС‹РІРµРґРµРЅС‹ Р±РµР· Р·РЅР°РЅРёСЏ РІРЅСѓС‚СЂРµРЅРЅРµР№ Р»РѕРіРёРєРё РјРµС‚РѕРґР°");
         }
 
-        static void TestCylinder(double r, double h, double expected, string testName)
+        static void UnitTesting()
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("=== РњРћР”РЈР›Р¬РќРћР• РўР•РЎРўРР РћР’РђРќРР• ===");
+            Console.WriteLine("РўРµСЃС‚РёСЂСѓРµРј РёР·РѕР»РёСЂРѕРІР°РЅРЅС‹Рµ РјРµС‚РѕРґС‹ РєР°Р»СЊРєСѓР»СЏС‚РѕСЂР°");
+            Console.ResetColor();
+
+            var calculator = new Calculator();
+
+            Console.WriteLine("\nРўРµСЃС‚РёСЂРѕРІР°РЅРёРµ СЃР»РѕР¶РµРЅРёСЏ:");
+            TestCalculatorOperation(calculator.Add, 2, 3, 5, "2 + 3 = 5");
+
+            Console.WriteLine("\nРўРµСЃС‚РёСЂРѕРІР°РЅРёРµ РґРµР»РµРЅРёСЏ:");
+            TestCalculatorOperation(calculator.Divide, 10, 2, 5, "10 / 2 = 5");
+            TestCalculatorOperation(calculator.Divide, 10, 0, 0, "10 / 0 = РёСЃРєР»СЋС‡РµРЅРёРµ", true);
+
+            Console.WriteLine("\nРС‚РѕРіРё РјРѕРґСѓР»СЊРЅРѕРіРѕ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ:");
+            Console.WriteLine("- РџСЂРѕС‚РµСЃС‚РёСЂРѕРІР°РЅС‹ РІСЃРµ РѕСЃРЅРѕРІРЅС‹Рµ РѕРїРµСЂР°С†РёРё РєР°Р»СЊРєСѓР»СЏС‚РѕСЂР°");
+            Console.WriteLine("РџСЂРѕРІРµСЂРµРЅС‹ РіСЂР°РЅРёС‡РЅС‹Рµ СЃР»СѓС‡Р°Рё(РґРµР»РµРЅРёРµ РЅР° РЅРѕР»СЊ)");
+            Console.WriteLine("- РљР°Р¶РґС‹Р№ С‚РµСЃС‚ РёР·РѕР»РёСЂРѕРІР°РЅ РѕС‚ РґСЂСѓРіРёС…");
+        }
+
+        static void IntegrationTesting()
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("=== РРќРўР•Р“Р РђР¦РРћРќРќРћР• РўР•РЎРўРР РћР’РђРќРР• ===");
+            Console.WriteLine("РўРµСЃС‚РёСЂСѓРµРј РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёРµ СЃРµСЂРІРёСЃР° Р·Р°РєР°Р·РѕРІ СЃ Р±Р°Р·РѕР№ РґР°РЅРЅС‹С…");
+            Console.ResetColor();
+
+            Console.WriteLine("\nРРЅРёС†РёР°Р»РёР·Р°С†РёСЏ РєРѕРјРїРѕРЅРµРЅС‚РѕРІ...");
+            var db = new Database();
+            var orderService = new OrderService(db);
+
+            Console.WriteLine("\nРўРµСЃС‚ 1: РЎРѕР·РґР°РЅРёРµ Рё РїРѕР»СѓС‡РµРЅРёРµ Р·Р°РєР°Р·Р°");
+            var order = new Order { Id = 1, ProductName = "РќРѕСѓС‚Р±СѓРє" };
+            orderService.PlaceOrder(order);
+            var retrieved = orderService.GetOrder(1);
+            Console.WriteLine($"Р—Р°РєР°Р· СЃРѕР·РґР°РЅ: ID={retrieved.Id}, РўРѕРІР°СЂ={retrieved.ProductName}");
+            Console.WriteLine($"РџСЂРѕРІРµСЂРєР°: Р—Р°РєР°Р· {(retrieved.ProductName == "РќРѕСѓС‚Р±СѓРє" ? "СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚" : "РЅРµ СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓРµС‚")} РѕР¶РёРґР°РµРјРѕРјСѓ");
+
+            Console.WriteLine("\nРўРµСЃС‚ 2: РЈРґР°Р»РµРЅРёРµ Р·Р°РєР°Р·Р°");
+            orderService.CancelOrder(1);
             try
             {
-                double actual = CylinderArea(r, h);
-                bool success = Math.Abs(expected - actual) < 0.0001;
-                PrintTestResult(testName, expected.ToString(), actual.ToString(), success);
+                var deleted = orderService.GetOrder(1);
+                Console.WriteLine("РћС€РёР±РєР°: Р—Р°РєР°Р· РІСЃРµ РµС‰Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ РІ СЃРёСЃС‚РµРјРµ");
             }
-            catch (Exception ex)
+            catch (KeyNotFoundException)
             {
-                PrintTestResult(testName, "корректный результат", ex.Message, false);
+                Console.WriteLine("РЈСЃРїРµС…: Р—Р°РєР°Р· СѓСЃРїРµС€РЅРѕ СѓРґР°Р»РµРЅ РёР· СЃРёСЃС‚РµРјС‹");
             }
+
+            Console.WriteLine("\nРС‚РѕРіРё РёРЅС‚РµРіСЂР°С†РёРѕРЅРЅРѕРіРѕ С‚РµСЃС‚РёСЂРѕРІР°РЅРёСЏ:");
+            Console.WriteLine("- РџСЂРѕРІРµСЂРµРЅРѕ РїРѕР»РЅРѕРµ РІР·Р°РёРјРѕРґРµР№СЃС‚РІРёРµ РјРµР¶РґСѓ СЃРµСЂРІРёСЃРѕРј Рё Р±Р°Р·РѕР№ РґР°РЅРЅС‹С…");
+            Console.WriteLine("- РЈС‡С‚РµРЅС‹ СЃС†РµРЅР°СЂРёРё СЃРѕР·РґР°РЅРёСЏ, РїРѕР»СѓС‡РµРЅРёСЏ Рё СѓРґР°Р»РµРЅРёСЏ Р·Р°РєР°Р·РѕРІ");
+            Console.WriteLine("- РџСЂРѕРІРµСЂРµРЅР° РѕР±СЂР°Р±РѕС‚РєР° РѕС€РёР±РѕРє РїСЂРё СЂР°Р±РѕС‚Рµ СЃ РЅРµСЃСѓС‰РµСЃС‚РІСѓСЋС‰РёРјРё Р·Р°РєР°Р·Р°РјРё");
         }
 
         static double CylinderArea(double radius, double height)
         {
             if (radius <= 0)
-                throw new ArgumentException("Радиус должен быть положительным");
+                throw new ArgumentException("Р Р°РґРёСѓСЃ РґРѕР»Р¶РµРЅ Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј");
             if (height <= 0)
-                throw new ArgumentException("Высота должна быть положительной");
+                throw new ArgumentException("Р’С‹СЃРѕС‚Р° РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕР№");
 
             return 2 * Math.PI * radius * height + 2 * Math.PI * radius * radius;
         }
 
-        static void UnitTestingDemo()
+        static void TestCalculatorOperation(Func<double, double, double> operation,
+                                        double a, double b, double expected,
+                                        string description, bool expectException = false)
         {
-            Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("=== МОДУЛЬНОЕ ТЕСТИРОВАНИЕ ===");
-            Console.WriteLine("Тестирование класса Calculator\n");
-            Console.ResetColor();
-
-            Calculator calculator = new Calculator();
-
-            TestCalculatorOperation(calculator.Add, 5, 3, 8, "Сложение (5+3)");
-            TestCalculatorOperation(calculator.Add, -5, -3, -8, "Сложение (-5 + -3)");
-
-            TestCalculatorOperation(calculator.Subtract, 10, 4, 6, "Вычитание (10-4)");
-            TestCalculatorOperation(calculator.Subtract, 4, 10, -6, "Вычитание (4-10)");
-
-            
-            TestCalculatorOperation(calculator.Multiply, 6, 7, 42, "Умножение (6*7)");
-            TestCalculatorOperation(calculator.Multiply, -6, 7, -42, "Умножение (-6*7)");
-
-            
-            TestCalculatorOperation(calculator.Divide, 15, 3, 5, "Деление (15/3)");
-            TestCalculatorOperation(calculator.Divide, 10, 4, 2.5, "Деление (10/4)");
-
-            
+            Console.WriteLine($"\nРўРµСЃС‚: {description}");
             try
             {
-                double result = calculator.Divide(10, 0);
-                PrintTestResult("Деление на ноль (10/0)", "исключение", result.ToString(), false);
+                double result = operation(a, b);
+                if (expectException)
+                {
+                    PrintTestResult("Р РµР·СѓР»СЊС‚Р°С‚:", "РћР¶РёРґР°Р»РѕСЃСЊ РёСЃРєР»СЋС‡РµРЅРёРµ", "РСЃРєР»СЋС‡РµРЅРёРµ РЅРµ РІРѕР·РЅРёРєР»Рѕ", false);
+                    return;
+                }
+                bool success = Math.Abs(result - expected) < 0.0001;
+                PrintTestResult("Р РµР·СѓР»СЊС‚Р°С‚:", expected.ToString(), result.ToString(), success);
+                Console.WriteLine($"Р”РµС‚Р°Р»Рё: {a} op {b} = {result} (РѕР¶РёРґР°Р»РѕСЃСЊ {expected})");
             }
-            catch (DivideByZeroException)
+            catch (Exception ex) when (expectException)
             {
-                PrintTestResult("Деление на ноль (10/0)", "исключение", "исключение", true);
-            }
-        }
-
-        static void TestCalculatorOperation(Func<double, double, double> operation, double a, double b, double expected, string testName)
-        {
-            try
-            {
-                double actual = operation(a, b);
-                bool success = Math.Abs(expected - actual) < 0.0001;
-                PrintTestResult(testName, expected.ToString(), actual.ToString(), success);
+                PrintTestResult("Р РµР·СѓР»СЊС‚Р°С‚:", "РћР¶РёРґР°Р»РѕСЃСЊ РёСЃРєР»СЋС‡РµРЅРёРµ", ex.GetType().Name, true);
+                Console.WriteLine($"Р”РµС‚Р°Р»Рё РёСЃРєР»СЋС‡РµРЅРёСЏ: {ex.Message}");
             }
             catch (Exception ex)
             {
-                PrintTestResult(testName, "корректный результат", ex.Message, false);
+                PrintTestResult("Р РµР·СѓР»СЊС‚Р°С‚:", expected.ToString(), ex.GetType().Name, false);
+                Console.WriteLine($"РќРµРѕР¶РёРґР°РЅРЅРѕРµ РёСЃРєР»СЋС‡РµРЅРёРµ: {ex.Message}");
             }
         }
 
-        static void IntegrationTestingDemo()
+        static void PrintTestResult(string label, string expected, string actual, bool isSuccess)
         {
-            Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("=== ИНТЕГРАЦИОННОЕ ТЕСТИРОВАНИЕ ===");
-            Console.WriteLine("Тестирование взаимодействия OrderService и Database\n");
-            Console.ResetColor();
-
-            var database = new Database();
-            var orderService = new OrderService(database);
-
-            
-            var order1 = new Order { Id = 1, ProductName = "Ноутбук", Quantity = 1, Price = 50000 };
-            orderService.PlaceOrder(order1);
-            PrintTestResult("Тест 1: Создание заказа", "успех", "успех", true);
-
-            
-            var retrievedOrder = orderService.GetOrder(1);
-            bool success = retrievedOrder != null && retrievedOrder.ProductName == "Ноутбук";
-            PrintTestResult("Тест 2: Получение заказа", "ноутбук", retrievedOrder?.ProductName ?? "null", success);
-
-            
-            orderService.CancelOrder(1);
-            try
-            {
-                var deletedOrder = orderService.GetOrder(1);
-                PrintTestResult("Тест 3: Удаление заказа", "исключение", deletedOrder.ToString(), false);
-            }
-            catch (KeyNotFoundException)
-            {
-                PrintTestResult("Тест 3: Удаление заказа", "успех", "успех", true);
-            }
-
-            
-            try
-            {
-                var nonExistentOrder = orderService.GetOrder(999);
-                PrintTestResult("Тест 4: Несуществующий заказ", "исключение", nonExistentOrder.ToString(), false);
-            }
-            catch (KeyNotFoundException)
-            {
-                PrintTestResult("Тест 4: Несуществующий заказ", "исключение", "исключение", true);
-            }
-        }
-
-        static void PrintTestResult(string testName, string expected, string actual, bool isSuccess)
-        {
-            Console.Write($"{testName}: Ожидается ");
+            Console.Write($"{label} ");
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.Write(expected);
             Console.ResetColor();
-            Console.Write(", Получено ");
+            Console.Write(" в†’ ");
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.Write(actual);
             Console.ResetColor();
-            Console.Write(" - ");
-
-            if (isSuccess)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("УСПЕХ");
-            }
-            else
-            {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("ОШИБКА");
-            }
+            Console.Write(" [");
+            Console.ForegroundColor = isSuccess ? ConsoleColor.Green : ConsoleColor.Red;
+            Console.Write(isSuccess ? "РЈРЎРџР•РҐ" : "РћРЁРР‘РљРђ");
             Console.ResetColor();
+            Console.WriteLine("]");
         }
-    }
 
-    public class Calculator
-    {
-        public double Add(double a, double b) => a + b;
-        public double Subtract(double a, double b) => a - b;
-        public double Multiply(double a, double b) => a * b;
-        public double Divide(double a, double b) => b == 0 ? throw new DivideByZeroException() : a / b;
-    }
+        public class Calculator
+        {
+            public double Add(double a, double b) => a + b;
+            public double Subtract(double a, double b) => a - b;
+            public double Multiply(double a, double b) => a * b;
+            public double Divide(double a, double b) => b == 0 ? throw new DivideByZeroException() : a / b;
+        }
 
-    public class Order
-    {
-        public int Id { get; set; }
-        public string ProductName { get; set; }
-        public int Quantity { get; set; }
-        public decimal Price { get; set; }
-    }
+        public class Order
+        {
+            public int Id { get; set; }
+            public string ProductName { get; set; }
+        }
 
-    public class Database
-    {
-        private readonly Dictionary<int, Order> _orders = new Dictionary<int, Order>();
+        public class Database
+        {
+            private readonly Dictionary<int, Order> _orders = new Dictionary<int, Order>();
 
-        public void AddOrder(Order order) => _orders[order.Id] = order;
-        public Order GetOrder(int id) => _orders.TryGetValue(id, out var order) ? order : throw new KeyNotFoundException();
-        public void RemoveOrder(int id) { if (!_orders.Remove(id)) throw new KeyNotFoundException(); }
-    }
+            public void AddOrder(Order order) => _orders[order.Id] = order;
+            public Order GetOrder(int id) => _orders.TryGetValue(id, out var order) ? order : throw new KeyNotFoundException();
+            public void RemoveOrder(int id) => _orders.Remove(id);
+        }
 
-    public class OrderService
-    {
-        private readonly Database _database;
-        public OrderService(Database database) => _database = database;
-        public void PlaceOrder(Order order) => _database.AddOrder(order);
-        public Order GetOrder(int id) => _database.GetOrder(id);
-        public void CancelOrder(int id) => _database.RemoveOrder(id);
+        public class OrderService
+        {
+            private readonly Database _db;
+
+            public OrderService(Database db) => _db = db;
+            public void PlaceOrder(Order order) => _db.AddOrder(order);
+            public Order GetOrder(int id) => _db.GetOrder(id);
+            public void CancelOrder(int id) => _db.RemoveOrder(id);
+        }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IAV5iE/DsGM=",
+  "dgSpecHash": "q98Oqkc/SiU=",
   "success": true,
-  "projectFilePath": "D:\\Рабочая\\Projects C#\\kab\\practica\\practica\\practica.csproj",
+  "projectFilePath": "C:\\Users\\bulka\\Desktop\\papa\\practica\\practica\\practica.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bulka\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\bulka\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",

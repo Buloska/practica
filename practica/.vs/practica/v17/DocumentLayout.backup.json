@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\\u0420\u0430\u0431\u043E\u0447\u0430\u044F\\Projects C#\\kab\\practica\\",
+  "WorkspaceRootPath": "C:\\Users\\bulka\\Desktop\\papa\\practica\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B43991FA-40A0-42BD-BE3F-3BE25D9C6BE7}|practica\\practica.csproj|d:\\\u0440\u0430\u0431\u043E\u0447\u0430\u044F\\projects c#\\kab\\practica\\practica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B43991FA-40A0-42BD-BE3F-3BE25D9C6BE7}|practica\\practica.csproj|c:\\users\\bulka\\desktop\\papa\\practica\\practica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B43991FA-40A0-42BD-BE3F-3BE25D9C6BE7}|practica\\practica.csproj|solutionrelative:practica\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -24,11 +24,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\\u0420\u0430\u0431\u043E\u0447\u0430\u044F\\Projects C#\\kab\\practica\\practica\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\bulka\\Desktop\\papa\\practica\\practica\\Program.cs",
               "RelativeDocumentMoniker": "practica\\Program.cs",
-              "ToolTip": "D:\\\u0420\u0430\u0431\u043E\u0447\u0430\u044F\\Projects C#\\kab\\practica\\practica\\Program.cs",
-              "RelativeToolTip": "practica\\Program.cs",
-              "ViewState": "AgIAACQBAAAAAAAAAAAcwFcBAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\bulka\\Desktop\\papa\\practica\\practica\\Program.cs*",
+              "RelativeToolTip": "practica\\Program.cs*",
+              "ViewState": "AgIAAJ0AAAAAAAAAAIAwwK4AAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T10:39:44.909Z",
               "EditorCaption": ""

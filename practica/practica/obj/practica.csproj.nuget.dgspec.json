@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Рабочая\\Projects C#\\kab\\practica\\practica\\practica.csproj": {}
+    "C:\\Users\\bulka\\Desktop\\papa\\practica\\practica\\practica.csproj": {}
   },
   "projects": {
-    "D:\\Рабочая\\Projects C#\\kab\\practica\\practica\\practica.csproj": {
+    "C:\\Users\\bulka\\Desktop\\papa\\practica\\practica\\practica.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Рабочая\\Projects C#\\kab\\practica\\practica\\practica.csproj",
+        "projectUniqueName": "C:\\Users\\bulka\\Desktop\\papa\\practica\\practica\\practica.csproj",
         "projectName": "practica",
-        "projectPath": "D:\\Рабочая\\Projects C#\\kab\\practica\\practica\\practica.csproj",
+        "projectPath": "C:\\Users\\bulka\\Desktop\\papa\\practica\\practica\\practica.csproj",
         "packagesPath": "C:\\Users\\bulka\\.nuget\\packages\\",
-        "outputPath": "D:\\Рабочая\\Projects C#\\kab\\practica\\practica\\obj\\",
+        "outputPath": "C:\\Users\\bulka\\Desktop\\papa\\practica\\practica\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
